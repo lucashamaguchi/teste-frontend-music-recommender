@@ -54,9 +54,11 @@ function WeatherStatusComponent(props: IWeatherStatusProps) {
         </Box>
       )}
 
+      {songs && 
+        <h1>Songs Recommended:</h1>
+      }
       {songs && songs?.map((song: any) => (
         <>
-          <h1>Songs Recommended:</h1>
           <Box
             onClick={() => window.open(song.url, '_blank')}
             sx={{
