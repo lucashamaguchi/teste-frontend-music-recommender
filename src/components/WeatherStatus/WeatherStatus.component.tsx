@@ -54,28 +54,30 @@ function WeatherStatusComponent(props: IWeatherStatusProps) {
         </Box>
       )}
 
-      <h1>Songs Recommended:</h1>
-      {songs.map((song: any) => (
-        <Box
-          onClick={() => window.open(song.url, '_blank')}
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "space-between",
-            margin: '10px',
-            cursor: 'pointer',
-            border: '1px solid grey',
-            paddingLeft: '25px',
-            paddingRight: '25px',
-          }}>
-        <img
-          style={{
-            marginRight: '12px'
-          }}
-          src={song.images.find((img: {height: number}) => img.height === 64).url}
-        />
-          <h2> - {song.name}</h2>
-        </Box>
+      {songs && songs?.map((song: any) => (
+        <>
+          <h1>Songs Recommended:</h1>
+          <Box
+            onClick={() => window.open(song.url, '_blank')}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "space-between",
+              margin: '10px',
+              cursor: 'pointer',
+              border: '1px solid grey',
+              paddingLeft: '25px',
+              paddingRight: '25px',
+            }}>
+          <img
+            style={{
+              marginRight: '12px'
+            }}
+            src={song.images.find((img: {height: number}) => img.height === 64).url}
+          />
+            <h2> - {song.name}</h2>
+          </Box>
+        </>
       ))
       }
     </Box>
