@@ -9,7 +9,7 @@ async function getCityFromCoordinates(coords: {
   //   `https://maps.googleapis.com/maps/api/geocode/json?latlng=${coords.lat},${coords.lng}&key=${key}`
   // );
   const response = await axios.get<any>(
-    `http://api.openweathermap.org/geo/1.0/reverse?lat=${coords.lat}&lon=${coords.lng}&appid=${key}`
+    `https://api.openweathermap.org/geo/1.0/reverse?lat=${coords.lat}&lon=${coords.lng}&appid=${key}`
   );
 
   return response.data;

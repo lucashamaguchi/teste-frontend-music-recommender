@@ -6,7 +6,7 @@ async function getCoordsFromCity(address: string) {
   //   `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${key}`
   // );
   const response = await axios.get<any>(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${address}&appid=${key}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${address}&appid=${key}`
   );
 
   return response.data;

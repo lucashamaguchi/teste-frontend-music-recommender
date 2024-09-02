@@ -48,7 +48,7 @@ function WeatherStatusComponent(props: IWeatherStatusProps) {
         }}>
           <h2>{weather?.current.temp} °</h2>
           <img
-            src={`http://openweathermap.org/img/w/${weather?.current.weather[0].icon}.png`}
+            src={`https://openweathermap.org/img/w/${weather?.current.weather[0].icon}.png`}
             alt={weather?.current.weather[0].description}
           />
         </Box>
